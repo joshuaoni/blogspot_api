@@ -40,8 +40,8 @@ app.get('/blogs', (req, res) => {fetchBlogs.handleFetchBlogs(req, res, db)})
 
 
 
-app.listen(3003, ()=>{
-    console.log(`app running on port 3003`)
+app.listen(process.env.PORT || 3003, ()=>{
+    console.log(`app running on port ${process.env.PORT}`)
 })
 
 
