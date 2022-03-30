@@ -26,7 +26,6 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 
-app.get('/', (req,res)=>{res.send('yoooooooooooooo')})
 // Sign Up
 app.post('/signup', (req, res) => {signup.handleSignup(req, res, db, bcrypt)})
 // Sign In
