@@ -14,11 +14,10 @@ const fetchBlogs = require('./controllers/fetchBlogs');
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
-        user: 'postgres',
-        password: 'psql',
-        database: 'blogspot',
-        port: 5432
+        connectionString: process.env.DATABASE_URL,
+        ssl: {
+            rejectUnauthorized: false
+        }
     }
 });
 
